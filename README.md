@@ -67,7 +67,7 @@ This project is my porfolio design with which I talk about myself and my profess
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://google.com) [Under construction]
+- [Live Demo Link](https://amon-cofie-portfolio.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
