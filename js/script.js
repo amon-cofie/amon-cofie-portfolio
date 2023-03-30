@@ -1,6 +1,6 @@
 /* toggle icon */
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
   menuIcon.classList.toggle('bx-x');
@@ -8,28 +8,28 @@ menuIcon.onclick = () => {
 };
 
 /* Active navlink styled */
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
   sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute('id');
+    const top = window.scrollY;
+    const offset = sec.offsetTop - 150;
+    const height = sec.offsetHeight;
+    const id = sec.getAttribute('id');
 
     if (top >= offset && top < offset + height) {
       navLinks.forEach((links) => {
         links.classList.remove('active');
         document
-          .querySelector('header nav a[href*=' + id + ']')
+          .querySelector(`header nav a[href*=${id}]`)
           .classList.add('active');
       });
     }
   });
 
   /* Make header sticky */
-  let header = document.querySelector('header');
+  const header = document.querySelector('header');
   header.classList.toggle('sticky', window.scrollY > 100);
 
   /* Remove toggle */
@@ -64,8 +64,6 @@ const typed = new Typed('.multiple-text', {
   backDelay: 1000,
   loop: true,
 });
-
-
 
 /* The pop up menu */
 const popUpMenu = (project) => {
@@ -161,7 +159,7 @@ const projectsArr = [
     githubLink: 'https://github.com/amon-cofie/first-capstone-project',
     liveLink: 'https://amon-cofie.github.io/first-capstone-project/',
     details:
-      `My first capstone project in microverse, a two webpage site for a pretend biomedical engineering conference. Inspiration for this project was obtained from Cindy Shin's behance design of a website for a Creative Commons Summit set to happen in October 2022. Built with HTML, CSS and JavaScript.`,
+      'My first capstone project in microverse, a two webpage site for a pretend biomedical engineering conference. Inspiration for this project was obtained from Cindy Shin\'s behance design of a website for a Creative Commons Summit set to happen in October 2022. Built with HTML, CSS and JavaScript.',
   },
   {
     image: 'images/project_screen_shots/air_pollution_tracker_1.png',
@@ -217,7 +215,6 @@ projectsArr.forEach((proj) => {
   projectsContainer.appendChild(project);
 
   popLink.addEventListener('click', () => {
-    console.log('Has been clicked');
     popUpMenu(proj);
   });
 });
