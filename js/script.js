@@ -91,6 +91,8 @@ const popUpMenu = (project) => {
 
   const repoBtn = document.createElement('a');
   const seeLive = document.createElement('a');
+  repoBtn.target = '_blank'
+  seeLive.target = '_blank'
   repoBtn.classList.add('btn', 'project-btns');
   seeLive.classList.add('btn', 'project-btns');
   repoBtn.textContent = 'GitHub';
@@ -199,7 +201,7 @@ projectsArr.forEach((proj) => {
   details.textContent = proj.details;
 
   const popLink = document.createElement('a');
-
+  
   const popBtn = document.createElement('i');
   popBtn.classList.add('bx', 'bx-link-external');
 
