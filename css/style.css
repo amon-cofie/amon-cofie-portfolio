@@ -10,7 +10,6 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-
   font-family: 'Poppins', sans-serif;
 }
 
@@ -19,9 +18,13 @@
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
+
   /* --main-color: rgb(207, 230, 105); */
+
   /* --main-color: violet; */
+
   /* --main-color: rgb(250, 90, 90); */
+
   /* --main-color: #d18762; */
 }
 
@@ -32,7 +35,7 @@ html {
 }
 
 html::-webkit-scrollbar {
-  width: .2rem;
+  width: 0.2rem;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -43,7 +46,6 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
 }
-
 
 section {
   min-height: 100vh;
@@ -109,9 +111,11 @@ section {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-2.4rem);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -283,6 +287,10 @@ span {
   transition: 0.5s ease;
 }
 
+.modal img {
+  width: 60%;
+}
+
 .portfolio-box:hover img {
   transform: scale(1.1);
 }
@@ -324,6 +332,7 @@ span {
 .portfolio-layer p::-webkit-scrollbar {
   width: 0.4rem;
 }
+
 .portfolio-layer p::-webkit-scrollbar-thumb {
   background-color: var(--text-color);
 }
@@ -433,10 +442,6 @@ span {
   max-height: 85vh;
 }
 
-.modal img {
-  width: 60%;
-}
-
 .modal-image-container {
   width: 56%;
 }
@@ -471,8 +476,7 @@ span {
   color: var(--bg-color);
   font-weight: bold;
   width: fit-content;
-  height: fit-content;
-  text-shadow: 0 0 .5rem var(--main-color);
+  text-shadow: 0 0 0.5rem var(--main-color);
 }
 
 .modal-header {
@@ -646,7 +650,6 @@ span {
     display: flex;
     width: 100%;
     gap: 1.25rem;
-
     justify-content: center;
   }
 }
