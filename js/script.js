@@ -160,7 +160,7 @@ const projectsArr = [
     title: 'BMEN 2022',
     githubLink: 'https://github.com/amon-cofie/first-capstone-project',
     liveLink: 'https://amon-cofie.github.io/first-capstone-project/',
-    details: `This project features a two-page website for a pretend biomedical engineering conference. Inspiration for this project was obtained from Cindy Shin's Behance design of a website for a Creative Commons Summit set to happen in October 2022. It is built with HTML, CSS, and JavaScript.`,
+    details: 'This project features a two-page website for a pretend biomedical engineering conference. Inspiration for this project was obtained from Cindy Shin\'s Behance design of a website for a Creative Commons Summit set to happen in October 2022. It is built with HTML, CSS, and JavaScript.',
   },
   {
     image: 'images/project_screen_shots/air_pollution_tracker_1.png',
