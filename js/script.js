@@ -21,9 +21,7 @@ window.onscroll = () => {
     if (top >= offset && top < offset + height) {
       navLinks.forEach((links) => {
         links.classList.remove('active');
-        document
-          .querySelector(`header nav a[href*=${id}]`)
-          .classList.add('active');
+        document.querySelector(`header nav a[href*=${id}]`).classList.add('active');
       });
     }
   });
@@ -45,20 +43,15 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal(
-  '.home-img, .services-container, .portfolio-box, .contact form',
-  { origin: 'bottom' },
-);
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', {
+  origin: 'bottom',
+});
 
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 const typed = new Typed('.multiple-text', {
-  strings: [
-    'Full-Stack Software Developer',
-    'Tech Enthusiast',
-    'Health and Fitness Savvy',
-  ],
+  strings: ['Full-Stack Software Developer', 'Tech Enthusiast', 'Health and Fitness Savvy'],
   typeSpeed: 50,
   backSpeed: 10,
   backDelay: 1000,
@@ -132,6 +125,14 @@ const popUpMenu = (project) => {
 /* Render projects dynamically */
 const projectsArr = [
   {
+    image: 'images/project_screen_shots/ycp_2.png',
+    title: 'Yazi Career Pathways',
+    githubLink: '#',
+    liveLink: 'https://careerpathways.yaziacademy.com/',
+    details:
+      'As a Software Engineer at Yazi, I was entrusted with the task of transforming a concept into a functional application. What began as a high-level idea from senior leadership has evolved into a fully-realized application, which is currently in development. Built with Flutter, this project represents the largest and most ambitious undertaking of my career to date, and I’m excited to see it continue to take shape.',
+  },
+  {
     image: 'images/project_screen_shots/awesome_books_2.png',
     title: 'Awesome Books',
     githubLink: 'https://github.com/amon-cofie/Awesome-books-ES6',
@@ -160,7 +161,8 @@ const projectsArr = [
     title: 'BMEN 2022',
     githubLink: 'https://github.com/amon-cofie/first-capstone-project',
     liveLink: 'https://amon-cofie.github.io/first-capstone-project/',
-    details: 'This project features a two-page website for a pretend biomedical engineering conference. Inspiration for this project was obtained from Cindy Shin\'s Behance design of a website for a Creative Commons Summit set to happen in October 2022. It is built with HTML, CSS, and JavaScript.',
+    details:
+      "This project features a two-page website for a pretend biomedical engineering conference. Inspiration for this project was obtained from Cindy Shin's Behance design of a website for a Creative Commons Summit set to happen in October 2022. It is built with HTML, CSS, and JavaScript.",
   },
   {
     image: 'images/project_screen_shots/air_pollution_tracker_1.png',
@@ -185,37 +187,26 @@ const projectsContainer = document.querySelector('.portfolio-container');
 projectsArr.forEach((proj) => {
   const project = document.createElement('div');
   project.classList.add('portfolio-box');
-
   const projectImg = document.createElement('img');
   projectImg.src = proj.image;
   projectImg.alt = proj.title;
-
   const layer = document.createElement('div');
   layer.classList.add('portfolio-layer');
-
   const title = document.createElement('h4');
   title.textContent = proj.title;
-
   const details = document.createElement('p');
   details.textContent = proj.details;
-
   const popLink = document.createElement('a');
-
   const popBtn = document.createElement('i');
   popBtn.classList.add('bx', 'bx-link-external');
-
-  popLink.appendChild(popBtn);
-
+  // popLink.appendChild(popBtn);
   layer.appendChild(title);
-  layer.appendChild(details);
-  layer.appendChild(popLink);
-
+  // layer.appendChild(details);
+  // layer.appendChild(popLink);
   project.appendChild(projectImg);
   project.appendChild(layer);
-
   projectsContainer.appendChild(project);
-
-  popLink.addEventListener('click', () => {
+  project.addEventListener('click', () => {
     popUpMenu(proj);
   });
 });

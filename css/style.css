@@ -313,6 +313,7 @@ span {
 }
 
 .portfolio-box:hover .portfolio-layer {
+  cursor: pointer;
   transform: translateY(0);
 }
 
