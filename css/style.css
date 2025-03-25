@@ -103,6 +103,7 @@ section {
 }
 
 .home-img img {
+  border-bottom-right-radius: 50px;
   width: 35vw;
   animation: floatImage 4s ease-in-out infinite;
 }
@@ -183,14 +184,23 @@ span {
 }
 
 .about {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 2rem;
   background: var(--bg-color);
+  padding-bottom: 10rem;
+}
+
+.about-img {
+  position: sticky;
+  top: 72px;
+  bottom: 72px;
 }
 
 .about-img img {
+  border-radius: 4px;
   width: 35vw;
 }
 
@@ -214,6 +224,8 @@ span {
 }
 
 .services {
+  min-height: 50vh;
+  padding-bottom: 10rem;
   background-color: var(--second-bg-color);
 }
 
@@ -296,7 +308,7 @@ span {
 }
 
 .portfolio-box .portfolio-layer {
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   left: 0;
   width: 100%;
@@ -307,8 +319,8 @@ span {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 0 4rem;
-  transform: translateY(100%);
+  padding: 4rem;
+  /* transform: translateY(100%); */
   transition: 0.1s ease;
 }
 
@@ -317,27 +329,30 @@ span {
 }
 
 .portfolio-layer h4 {
+  margin-bottom: 42px;
   font-size: 3rem;
   color: var(--main-color);
   text-shadow: 0 0 1rem var(--bg-color);
 }
 
 .portfolio-layer p {
+  display: none;
   font-size: 1.6rem;
   margin: 0.3rem 0 1rem;
   max-height: 30%;
   overflow-y: scroll;
 }
 
-.portfolio-layer p::-webkit-scrollbar {
+/* .portfolio-layer p::-webkit-scrollbar {
   width: 0.4rem;
-}
+} */
 
-.portfolio-layer p::-webkit-scrollbar-thumb {
+/* .portfolio-layer p::-webkit-scrollbar-thumb {
   background-color: var(--text-color);
-}
+} */
 
 .portfolio-layer a {
+  cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -435,20 +450,20 @@ span {
   background: var(--second-bg-color);
   box-shadow: 0 0 1rem var(--main-color);
   border-radius: 0.8rem;
-  display: flex;
+  /* display: flex; */
   gap: 2rem;
-  width: 85%;
+  max-width: 85%;
   z-index: 101;
   max-height: 85vh;
 }
 
-.modal-image-container {
+/* .modal-image-container {
   width: 56%;
-}
+} */
 
 .modal-details {
   overflow-y: scroll;
-  width: 40%;
+  /* width: 40%; */
 }
 
 .modal-details::-webkit-scrollbar {
@@ -465,8 +480,8 @@ span {
 
 .close-button {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 8px;
+  top: 0px;
   padding: 1%;
   font-size: 2.5rem;
   cursor: pointer;
@@ -516,7 +531,7 @@ span {
 }
 
 .project-btns {
-  width: 40%;
+  /* width: 40%; */
   text-align: center;
 }
 
@@ -534,6 +549,10 @@ span {
 
   section {
     padding: 10rem 3% 2rem;
+  }
+
+  .home-img img {
+    border-bottom-right-radius: 0px;
   }
 
   .services {
@@ -599,11 +618,18 @@ span {
 
   .about {
     flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .about-img {
+    position: relative;
+    top: 0;
+    bottom: 0;
   }
 
   .about img {
     width: 70vw;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
   }
 
   .services h2 {
